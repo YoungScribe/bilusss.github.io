@@ -7,15 +7,15 @@ body {
     margin: 0;
     text-align: center;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffddb8;
 }
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 30px;
 }
 p {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 img {
     width: 512px;
