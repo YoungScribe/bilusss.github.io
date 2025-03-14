@@ -35,15 +35,15 @@ html {
     align-items: center;
     font-size: 3rem;
 }
-.blue {
+.one {
     background: #00bfff;
 }
-.turqoise {
+.two {
     background: #40e0d0;
 }
-.green {
+.three {
     background: #3cb371;
 }
-.bordeaux {
+.four {
     background: #800020;
 }
