@@ -1,56 +1,42 @@
-body {
-    width: 100%;
-    height: 100vh;
+body,
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffddb8;
-    text-align: center;
-}
-h1 {
-    font-size: 4rem;
-    margin-bottom: 30px;
-}
-p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-img {
-    width: 512px;
-    height: 512px;
+    overflow-x: hidden;
 }
 
 #pinContainer {
     width: 100%;
-    height: 100vh; /* Ensure it takes the full viewport height */
+    height: 100vh; /* Użyj viewport height */
     overflow: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
 }
+
 #slideContainer {
-    width: 400%; /* to contain 4 panels, each with 100% of window width */
+    width: 400%; /* 4 sekcje */
     height: 100%;
-    display: flex; /* Use flexbox to align panels horizontally */
 }
+
 .panel {
-    height: 100vh; /* Ensure each panel takes the full viewport height */
-    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
-    flex-shrink: 0; /* Prevent panels from shrinking */
+    height: 100%;
+    width: 25%;
+    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: white;
+    font-size: 3rem;
 }
-.panel.blue {
-    background-color: blue;
+.blue {
+    background: #00bfff;
 }
-.panel.turqoise {
-    background-color: turquoise;
+.turqoise {
+    background: #40e0d0;
 }
-.panel.green {
-    background-color: green;
+.green {
+    background: #3cb371;
 }
-.panel.bordeaux {
-    background-color: bordeaux;
+.bordeaux {
+    background: #800020;
 }
