@@ -1,16 +1,51 @@
+:root {
+    --slide-amount: 4; /* Default 4 slides */
+    --slide-container-width: calc(100% * var(--slide-amount));
+    --panel-width: calc(100% / var(--slide-amount));
+
+    --main-font: "DM Serif Text", serif;
+    --secondary-font: Arial, sans-serif;
+}
+.italic-text {
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+}
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: "DM Serif Text", serif;
+    background: #010038;
 }
 html {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+h1,
+b {
+    color: #f39422;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: "DM Serif Text", serif;
+}
+p {
+    color: #f9b02b;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: "DM Serif Text", serif;
+}
+#main {
+    width: 100%;
+    height: 100vh;
+}
+
+#last {
+    width: 100%;
+    height: 100vh;
 }
 
 #pinContainer {
@@ -22,13 +57,12 @@ html {
 }
 
 #slideContainer {
-    width: 400%; /* 4 sekcje */
+    width: var(--slide-container-width);
     height: 100%;
 }
-
 .panel {
     height: 100%;
-    width: 25%;
+    width: var(--panel-width);
     float: left;
     display: flex;
     justify-content: center;
@@ -36,14 +70,24 @@ html {
     font-size: 3rem;
 }
 .one {
-    background: #00bfff;
+    background: #16205b;
 }
 .two {
-    background: #40e0d0;
+    background: #293a80;
 }
 .three {
-    background: #3cb371;
+    background: #3e5ca3;
 }
 .four {
-    background: #800020;
+    background: #537ec5;
 }
+/* fonty:
+F39422
+F9B02B
+F6A226
+
+colory: od ciemnego
+010038
+293A80
+537EC5
+*/
