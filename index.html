@@ -134,7 +134,8 @@
                 <section class="panel two">
                     <div>
                         <div class="project-heading">
-                            <h1>twojpostergenerator</h1>
+                            <h1>TwojPosterGenerator</h1>
+                            <!-- Możesz dodać logo jeśli dostępne -->
                         </div>
                         <div class="project-description">
                             <p>
@@ -150,63 +151,43 @@
                             </button>
                         </div>
                         <div class="preview-or-technologies">
+                            <!-- Jeśli masz GIF lub obraz do pokazania, odkomentuj poniższe -->
                             <!-- <img
-                                class="AppShowOff-2"
-                                src="./images/twojpostergenerator/AppShowOff.gif"
-                                alt="twojpostergenerator Show-Off as a gif"
-                            /> -->
+                        class="AppShowOff-2"
+                        src="./images/twojpostergenerator/AppShowOff.gif"
+                        alt="TwojPosterGenerator Show-Off as a gif"
+                      /> -->
 
                             <div class="tech-section">
                                 <h2>Technologie:</h2>
                                 <div class="tech-badges">
                                     <span class="tech-badge">
                                         <img
-                                            src="./images/icons/java.svg"
-                                            alt="Java icon"
+                                            src="./images/icons/python.svg"
+                                            alt="Python icon"
                                         />
-                                        Java
+                                        Python
                                     </span>
                                     <span class="tech-badge">
                                         <img
-                                            src="./images/icons/spring.svg"
-                                            alt="Spring icon"
+                                            src="./images/icons/pillow.svg"
+                                            alt="Pillow icon"
                                         />
-                                        Spring Boot
+                                        Pillow (PIL)
                                     </span>
                                     <span class="tech-badge">
                                         <img
-                                            src="./images/icons/html5.svg"
-                                            alt="HTML5 icon"
+                                            src="./images/icons/spotify.svg"
+                                            alt="Spotify icon"
                                         />
-                                        HTML5
+                                        Spotipy
                                     </span>
                                     <span class="tech-badge">
                                         <img
-                                            src="./images/icons/css3.svg"
-                                            alt="CSS3 icon"
+                                            src="./images/icons/requests.svg"
+                                            alt="Requests icon"
                                         />
-                                        CSS3
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/javascript.svg"
-                                            alt="JavaScript icon"
-                                        />
-                                        JavaScript
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/docker.svg"
-                                            alt="Docker icon"
-                                        />
-                                        Docker
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/postgresql.svg"
-                                            alt="PostgreSQL icon"
-                                        />
-                                        PostgreSQL
+                                        Requests
                                     </span>
                                 </div>
                             </div>
@@ -229,15 +210,58 @@
                 </section>
                 <section class="panel three">
                     <div>
-                        <h1 hrel="https://github.com/bilusss/WordGuesser">
-                            WordGuesser
-                        </h1>
-                        <p>
-                            Pythonowa aplikacja filtrująca słowa z pliku według
-                            kryteriów, takich jak liczba liter oraz określone
-                            początkowe i końcowe znaki
-                        </p>
-                        <img src="./images/duck.gif" alt="coding duck gif" />
+                        <div class="project-heading">
+                            <h1>WordGuesser</h1>
+                            <!-- Możesz dodać logo jeśli dostępne -->
+                        </div>
+                        <div class="project-description">
+                            <p>
+                                Pythonowa aplikacja filtrująca słowa z pliku
+                                według kryteriów, takich jak liczba liter oraz
+                                określone początkowe i końcowe znaki
+                            </p>
+                            <button
+                                class="more-info-btn"
+                                data-modal="modal-wordguesser"
+                            >
+                                Więcej informacji
+                            </button>
+                        </div>
+                        <div class="preview-or-technologies">
+                            <!-- Jeśli masz GIF lub obraz do pokazania, odkomentuj poniższe -->
+                            <!-- <img
+                        class="AppShowOff-3"
+                        src="./images/WordGuesser/AppShowOff.gif"
+                        alt="WordGuesser Show-Off as a gif"
+                      /> -->
+
+                            <div class="tech-section">
+                                <h2>Technologie:</h2>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/python.svg"
+                                            alt="Python icon"
+                                        />
+                                        Python
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/bilusss/WordGuesser"
+                                target="_blank"
+                            >
+                                <span class="tech-badge">
+                                    <img
+                                        src="./images/icons/github.svg"
+                                        alt="GitHub icon"
+                                    />
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -298,15 +322,82 @@
         <div class="modal-container" id="modal-twojpostergenerator">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>twojpostergenerator - szczegóły projektu</h2>
+                    <h2>TwojPosterGenerator - szczegóły projektu</h2>
                     <button class="modal-close">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>[Tu wstaw szczegółowy opis drugiego projektu]</p>
+                    <p>
+                        TwojPosterGenerator to innowacyjny projekt w Pythonie,
+                        który automatycznie generuje estetyczne plakaty
+                        zawierające informacje o ulubionych albumach muzycznych.
+                        Aplikacja korzysta z API Spotify do pobierania
+                        szczegółowych danych o artystach i albumach, takich jak
+                        nazwa, data wydania, okładka albumu czy lista utworów.
+                    </p>
+                    <p>
+                        Następnie, za pomocą biblioteki Pillow, projekt łączy te
+                        dane z elementami graficznymi, tworząc unikalny plakat,
+                        który dodatkowo zawiera scentralizowany kod Spotify oraz
+                        analizę dominujących kolorów okładki.
+                    </p>
+                    <p>
+                        Praca nad tym projektem pozwoliła mi zgłębić zagadnienia
+                        związane z przetwarzaniem obrazów, integracją z
+                        zewnętrznymi API oraz tworzeniem dynamicznych grafik. To
+                        doświadczenie znacząco poszerzyło moje horyzonty w
+                        zakresie automatyzacji procesów graficznych i
+                        projektowania interaktywnych aplikacji.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a
                         href="https://github.com/bilusss/twojpostergenerator"
+                        target="_blank"
+                        class="tech-badge"
+                    >
+                        <img
+                            src="./images/icons/github.svg"
+                            alt="GitHub icon"
+                        />
+                        Zobacz na GitHubie
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" id="modal-wordguesser">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>WordGuesser - szczegóły projektu</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        WordGuesser to projekt w Pythonie, którego celem jest
+                        pomoc użytkownikom w wyszukiwaniu słów według
+                        określonych kryteriów – takich jak liczba liter,
+                        początkowe lub końcowe znaki. Program czyta dane ze
+                        słownikowego pliku tekstowego, a następnie filtruje je
+                        zgodnie z podanymi przez użytkownika warunkami.
+                    </p>
+                    <p>
+                        Projekt ten był dla mnie doskonałą okazją do nauki pracy
+                        z operacjami na plikach, manipulacji łańcuchami znaków
+                        oraz tworzenia prostych algorytmów filtrujących. Praca
+                        nad WordGuesser pozwoliła mi zrozumieć, jak ważna jest
+                        efektywna obsługa danych oraz jak można wykorzystać
+                        logikę programowania do rozwiązywania praktycznych
+                        problemów.
+                    </p>
+                    <p>
+                        Projekt ten pokazał mi również, jak zbudować
+                        interaktywną aplikację konsolową, która zachęca
+                        użytkownika do eksperymentowania z różnymi kryteriami
+                        wyszukiwania.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a
+                        href="https://github.com/bilusss/WordGuesser"
                         target="_blank"
                         class="tech-badge"
                     >
