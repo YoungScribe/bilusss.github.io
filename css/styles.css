@@ -1,56 +1,385 @@
+/*=== INIT ===*/
+
 :root {
-    --slide-amount: 4; /* Default 4 slides */
+    /* Slides */
+    --slide-amount: 3; /* Default 4 slides */
     --slide-container-width: calc(100% * var(--slide-amount));
     --panel-width: calc(100% / var(--slide-amount));
 
+    /* Breakpoints*/
+    --mobile: 576px;
+    --tablet: 768px;
+    --desktop: 1024px;
+    --large: 1440px;
+
+    /* Typography - Mobile first */
     --main-font: "DM Serif Text", serif;
     --secondary-font: Arial, sans-serif;
+    --main-font-size: 1rem;
+    --heading-font-size: 1.8rem;
+    --p-font-size: 1.2rem;
+
+    /* Colors */
+    --primary-color: #f39422;
+    --secondary-color: #f9b02b;
+    --background-color: #010038;
+    --panel-color-1: #16205b;
+    --panel-color-2: #293a80;
+    --panel-color-3: #3e5ca3;
+    --panel-color-4: #537ec5;
+    --modal-background: #537ec5;
+    --modal-text-color: #0a1c3e;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
 }
-.italic-text {
-    font-family: "DM Serif Text", serif;
-    font-style: italic;
+
+/*=== GENERAL (MOBILE FIRST) ===*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 1rem; /* 1rem = 16px */
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: "DM Serif Text", serif;
-    background: #010038;
-}
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-h1,
-b {
-    color: #f39422;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-family: "DM Serif Text", serif;
-}
-p {
-    color: #f9b02b;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: "DM Serif Text", serif;
-}
-#main {
-    width: 100%;
-    height: 100vh;
+    background: var(--background-color);
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    padding: var(--spacing-md);
+    color: var(--secondary-color);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+img.AppShowOff-4 {
+    max-width: 30%;
+    margin: 0 auto;
+    display: block;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+/*=== TYPOGRAPHY ===*/
+
+h1,
+b {
+    color: var(--primary-color);
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--spacing-md);
+    font-weight: bold;
+    /* line-height: 1.2; */
+}
+p {
+    color: var(--secondary-color);
+    font-size: var(--p-font-size);
+    margin-bottom: var(--spacing-md);
+    /* line-height: 1.5; */
+}
+
+/*=== LAYOUT COMPONENTS ===*/
+
+.project-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.project-heading h1 {
+    margin-bottom: 0;
+}
+
+.project-description {
+    max-width: 90%;
+    margin: 0 auto var(--spacing-md);
+    text-align: center;
+}
+
+.preview-or-technologies {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Upewnij się, że to jest zawsze center */
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.tech-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    padding: 0.4em 0.8em;
+    font-family: var(--secondary-font);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform-origin: center;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tech-badge img {
+    height: 1.2em;
+    width: auto;
+}
+
+.tech-section {
+    margin-top: var(--spacing-md);
+    text-align: center;
+    width: 100%;
+}
+
+.tech-section h2 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.project-logo {
+    height: 2em;
+    width: auto;
+    vertical-align: middle;
+}
+
+.project-link {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+    position: relative;
+    margin-left: 0;
+}
+
+.project-link .tech-badge {
+    /* Specjalne style dla odznaki GitHub */
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 1.1em;
+    padding: 0.5em 1.2em;
+    transition: all 0.3s ease;
+}
+
+.project-link .tech-badge:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-link .tech-badge img {
+    height: 1.4em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*=== MODAL STYLES ===*/
+
+.more-info-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5em 1.2em;
+    font-family: var(--secondary-font);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-sm);
+    display: inline-block;
+}
+
+.more-info-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--panel-color-4);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.modal-container.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+    color: var(--modal-text-color);
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    color: var(--modal-text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--modal-text-color);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer .tech-badge {
+    font-size: 1em;
+    padding: 0.5em 1.2em;
+    color: var(--modal-text-color);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Scrollbar dla modalu */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Blokowanie przewijania body gdy modal jest otwarty */
+body.modal-open {
+    overflow: hidden;
+}
+
+/*=== SLIDER ===*/
+
+#main,
 #last {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
 }
 
 #pinContainer {
     width: 100%;
-    height: 100vh; /* Użyj viewport height */
+    height: 100vh;
     overflow: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
@@ -59,6 +388,7 @@ p {
 #slideContainer {
     width: var(--slide-container-width);
     height: 100%;
+    transition: transform 0.3s ease;
 }
 .panel {
     height: 100%;
@@ -67,20 +397,232 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    padding: var(--spacing-md);
 }
+
+.panel > div {
+    max-width: 90%;
+}
+
+/*=== COLORS OF SLIDES ===*/
+
 .one {
-    background: #16205b;
+    background: var(--panel-color-1);
 }
 .two {
-    background: #293a80;
+    background: var(--panel-color-2);
 }
 .three {
-    background: #3e5ca3;
+    background: var(--panel-color-3);
 }
 .four {
-    background: #537ec5;
+    background: var(--panel-color-4);
 }
+
+/*=== RESPONSIVE DESIGN ===*/
+
+/* Tablet (>= 768px) */
+@media screen and (min-width: 768px) {
+    :root {
+        --main-font-size: 1.1rem;
+        --heading-font-size: 2.2rem;
+        --p-font-size: 1.4rem;
+    }
+
+    .panel > div {
+        max-width: 80%;
+    }
+
+    img.AppShowOff-1 {
+        max-width: 80%;
+    }
+    img.AppShowOff-4 {
+        max-width: 25%;
+    }
+    .project-heading {
+        justify-content: center;
+    }
+
+    .project-logo {
+        height: 2.2em;
+    }
+
+    .project-description {
+        max-width: 80%;
+    }
+
+    .preview-or-technologies {
+            flex-direction: row;
+            align-items: center; /* Zmień z flex-start na center */
+            gap: var(--spacing-lg); /* Większy odstęp między obrazem a technologiami */
+        }
+
+        .preview-or-technologies img {
+            flex: 3;
+            align-self: center; /* Obrazek wycentrowany pionowo */
+        }
+
+        .tech-section {
+            flex: 2;
+            margin-top: 0;
+            padding-left: var(--spacing-md);
+            text-align: center;
+            display: flex; /* Dodaj flex dla lepszego rozmieszczenia wewnętrznych elementów */
+            flex-direction: column;
+            justify-content: center; /* Centruj w pionie */
+            align-self: center; /* Sekcja tech wycentrowana pionowo */
+            height: 100%; /* Zajmij całą dostępną wysokość */
+        }
+
+    .tech-badges {
+        justify-content: center;
+    }
+
+    /* .project-link {
+        justify-content: flex-start;
+        margin-top: var(--spacing-lg);
+        margin-left: calc(
+            var(--spacing-md) + 25%
+        ); /* Przesunięcie od lewej strony dla tablet */
+    } */
+    .more-info-btn {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop (>= 1024px) */
+@media screen and (min-width: 1024px) {
+    :root {
+        --main-font-size: 1.2rem;
+        --heading-font-size: 2.8rem;
+        --p-font-size: 1.6rem;
+    }
+
+    body {
+        padding: var(--spacing-lg);
+    }
+
+    .panel > div {
+        max-width: 70%;
+    }
+
+    h1,
+    b {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    p {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    img.AppShowOff-1 {
+        max-width: 70%;
+    }
+    img.AppShowOff-4 {
+        max-width: 15%;
+    }
+    .project-heading {
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    .project-logo {
+        height: 2.4em;
+    }
+    .project-description {
+        max-width: 70%;
+    }
+
+    .tech-badge {
+        font-size: 1em;
+    }
+    /* .project-link {
+        margin-top: var(--spacing-lg);
+        margin-left: calc(
+            var(--spacing-lg) + 30%
+        );
+    } */
+    .modal-content {
+        width: 70%;
+    }
+
+    .modal-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .modal-body p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Screens (>= 1440px) */
+@media screen and (min-width: 1440px) {
+    :root {
+        --main-font-size: 1.3rem;
+        --heading-font-size: 3.2rem;
+        --p-font-size: 1.8rem;
+    }
+
+    .panel > div {
+        max-width: 60%;
+    }
+
+    img.AppShowOff-1 {
+        max-width: 60%;
+    }
+    img.AppShowOff-4 {
+        max-width: 10%;
+    }
+    .project-logo {
+        height: 2.6em;
+    }
+}
+
+/* Special case for ultra-wide screens */
+@media screen and (min-width: 1800px) {
+    :root {
+        --heading-font-size: 3.5rem;
+    }
+
+    .panel > div {
+        max-width: 50%;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    #pinContainer,
+    #slideContainer {
+        height: auto;
+        width: 100%;
+        perspective: none;
+    }
+
+    .panel {
+        width: 100%;
+        float: none;
+        page-break-after: always;
+        background: white !important;
+    }
+
+    h1,
+    p {
+        color: black;
+    }
+}
+
 /* fonty:
 F39422
 F9B02B

@@ -15,6 +15,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <!-- svg icons from - simpleicons.org/ -->
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./site.webmanifest" />
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="theme-color" content="#010038" />
     </head>
     <body>
         <div id="main">
@@ -28,30 +50,296 @@
                 <!-- If you change amount in js, change sections below-->
                 <section class="panel one">
                     <div>
-                        <h1>Projekt 1</h1>
-                        <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-                        <img src="./images/duck.gif" alt="coding duck gif" />
+                        <div class="project-heading">
+                            <h1>TradingSignalApp</h1>
+                            <img
+                                class="project-logo"
+                                src="./images/TradingSignal/TS_logo.png"
+                                alt="TradingViewApp logo"
+                            />
+                        </div>
+                        <!-- Przycisk "Więcej informacji" w sekcji projektu -->
+                        <div class="project-description">
+                            <p>
+                                Internetowa aplikacja do śledzenia portfela,
+                                umożliwiająca dodawanie monet i przeglądanie
+                                najpopularniejszych par kryptowalut dzięki
+                                Binance API
+                            </p>
+                            <button
+                                class="more-info-btn"
+                                data-modal="modal-tradingsignalapp"
+                            >
+                                Więcej informacji
+                            </button>
+                        </div>
+
+                        <div class="preview-or-technologies">
+                            <img
+                                class="AppShowOff-1"
+                                src="./images/TradingSignal/AppShowOff.gif"
+                                alt="TradingViewApp Show-Off as a gif"
+                            />
+
+                            <div class="tech-section">
+                                <h2>Technologie:</h2>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/java.svg"
+                                            alt="Java icon"
+                                        />
+                                        Java
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/spring.svg"
+                                            alt="Spring icon"
+                                        />
+                                        Spring Boot
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/html5.svg"
+                                            alt="HTML5 icon"
+                                        />
+                                        HTML5
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/css3.svg"
+                                            alt="CSS3 icon"
+                                        />
+                                        CSS3
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/javascript.svg"
+                                            alt="JavaScript icon"
+                                        />
+                                        JavaScript
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/docker.svg"
+                                            alt="Docker icon"
+                                        />
+                                        Docker
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/postgresql.svg"
+                                            alt="PostgreSQL icon"
+                                        />
+                                        PostgreSQL
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/bilusss/TradingSignalApp"
+                                target="_blank"
+                            >
+                                <span class="tech-badge">
+                                    <img
+                                        src="./images/icons/github.svg"
+                                        alt="GitHub icon"
+                                    />
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section class="panel two">
                     <div>
-                        <h1>Projekt 2</h1>
-                        <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-                        <img src="./images/duck.gif" alt="coding duck gif" />
+                        <div class="project-heading">
+                            <h1>TwojPosterGenerator</h1>
+                            <!-- Możesz dodać logo jeśli dostępne -->
+                        </div>
+                        <div class="project-description">
+                            <p>
+                                Aplikacja generująca plakaty muzyczne,
+                                pobierająca dane o albumach, artystach i
+                                utworach dzięki Spotify API
+                            </p>
+                            <button
+                                class="more-info-btn"
+                                data-modal="modal-twojpostergenerator"
+                            >
+                                Więcej informacji
+                            </button>
+                        </div>
+                        <div class="preview-or-technologies">
+                            <!-- Jeśli masz GIF lub obraz do pokazania, odkomentuj poniższe -->
+                            <!-- <img
+                        class="AppShowOff-2"
+                        src="./images/twojpostergenerator/AppShowOff.gif"
+                        alt="TwojPosterGenerator Show-Off as a gif"
+                      /> -->
+
+                            <div class="tech-section">
+                                <h2>Technologie:</h2>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/python.svg"
+                                            alt="Python icon"
+                                        />
+                                        Python
+                                    </span>
+                                    <span class="tech-badge">Pillow (PIL)</span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/spotify.svg"
+                                            alt="Spotify icon"
+                                        />
+                                        Spotipy
+                                    </span>
+                                    <span class="tech-badge"> Requests </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/bilusss/twojpostergenerator"
+                                target="_blank"
+                            >
+                                <span class="tech-badge">
+                                    <img
+                                        src="./images/icons/github.svg"
+                                        alt="GitHub icon"
+                                    />
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section class="panel three">
                     <div>
-                        <h1>Projekt 3</h1>
-                        <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-                        <img src="./images/duck.gif" alt="coding duck gif" />
+                        <div class="project-heading">
+                            <h1>WordGuesser</h1>
+                            <!-- Możesz dodać logo jeśli dostępne -->
+                        </div>
+                        <div class="project-description">
+                            <p>
+                                Pythonowa aplikacja filtrująca słowa z pliku
+                                według kryteriów, takich jak liczba liter oraz
+                                określone początkowe i końcowe znaki
+                            </p>
+                            <button
+                                class="more-info-btn"
+                                data-modal="modal-wordguesser"
+                            >
+                                Więcej informacji
+                            </button>
+                        </div>
+                        <div class="preview-or-technologies">
+                            <!-- Jeśli masz GIF lub obraz do pokazania, odkomentuj poniższe -->
+                            <!-- <img
+                        class="AppShowOff-3"
+                        src="./images/WordGuesser/AppShowOff.gif"
+                        alt="WordGuesser Show-Off as a gif"
+                      /> -->
+
+                            <div class="tech-section">
+                                <h2>Technologie:</h2>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/python.svg"
+                                            alt="Python icon"
+                                        />
+                                        Python
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/bilusss/WordGuesser"
+                                target="_blank"
+                            >
+                                <span class="tech-badge">
+                                    <img
+                                        src="./images/icons/github.svg"
+                                        alt="GitHub icon"
+                                    />
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section class="panel four">
                     <div>
-                        <h1>Projekt 4</h1>
-                        <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-                        <img src="./images/duck.gif" alt="coding duck gif" />
+                        <div class="project-heading">
+                            <h1>Calculator</h1>
+                        </div>
+                        <div class="project-description">
+                            <p>
+                                Mobilna aplikacja kalkulatora napisana w języku
+                                Swift, realizująca podstawowe operacje
+                                matematyczne z intuicyjnym interfejsem dla
+                                urządzeń iOS
+                            </p>
+                            <button
+                                class="more-info-btn"
+                                data-modal="modal-calculator"
+                            >
+                                Więcej informacji
+                            </button>
+                        </div>
+                        <div class="preview-or-technologies">
+                            <img
+                                class="AppShowOff-4"
+                                src="./images/calculator/AppShowOff.png"
+                                alt="Calculator App Show-Off as a gif"
+                            />
+
+                            <div class="tech-section">
+                                <h2>Technologie:</h2>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/swift.svg"
+                                            alt="Swift icon"
+                                        />
+                                        Swift
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/xcode.svg"
+                                            alt="Xcode icon"
+                                        />
+                                        Xcode
+                                    </span>
+                                    <span class="tech-badge">
+                                        <img
+                                            src="./images/icons/ios.svg"
+                                            alt="iOS icon"
+                                        />
+                                        iOS
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/bilusss/Calculator"
+                                target="_blank"
+                            >
+                                <span class="tech-badge">
+                                    <img
+                                        src="./images/icons/github.svg"
+                                        alt="GitHub icon"
+                                    />
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -62,5 +350,185 @@
             <img src="./images/duck.gif" alt="coding duck gif" />
         </div>
         <script src="./js/script.js"></script>
+        <div class="modal-container" id="modal-tradingsignalapp">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>TradingSignalApp</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        TradingSignalApp to aplikacja webowa służąca do
+                        zarządzania portfelem kryptowalut. Użytkownik może w
+                        niej dodawać posiadane monety oraz śledzić
+                        najpopularniejsze pary walutowe dostępne na rynku.
+                        Aplikacja integruje się z API Binance, co pozwala na
+                        pobieranie aktualnych danych dotyczących kursów i
+                        notowań.
+                    </p>
+                    <p>
+                        Praca nad tym projektem była niezwykle wymagająca,
+                        ponieważ nauczyłem się między innymi tworzenia
+                        interfejsów użytkownika w HTML, CSS oraz JavaScript, a
+                        także głębiej poznałem zasady programowania w języku
+                        Java. Dużym wyzwaniem była integracja z zewnętrznym API
+                        oraz obsługa dynamicznych danych, co zmusiło mnie do
+                        wdrożenia rozwiązań zapewniających płynność i
+                        responsywność aplikacji.
+                    </p>
+                    <p>
+                        Projekt ten pozwolił mi również poznać technologię
+                        konteneryzacji przy użyciu Docker, co umożliwiło
+                        łatwiejsze wdrażanie i testowanie aplikacji.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a
+                        href="https://github.com/bilusss/TradingSignalApp"
+                        target="_blank"
+                        class="tech-badge"
+                    >
+                        <img
+                            src="./images/icons/github.svg"
+                            alt="GitHub icon"
+                        />
+                        Zobacz na GitHubie
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" id="modal-twojpostergenerator">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>TwojPosterGenerator</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        TwojPosterGenerator to innowacyjny projekt w Pythonie,
+                        który automatycznie generuje estetyczne plakaty
+                        zawierające informacje o ulubionych albumach muzycznych.
+                        Aplikacja korzysta z API Spotify do pobierania
+                        szczegółowych danych o artystach i albumach, takich jak
+                        nazwa, data wydania, okładka albumu czy lista utworów.
+                    </p>
+                    <p>
+                        Następnie, za pomocą biblioteki Pillow, projekt łączy te
+                        dane z elementami graficznymi, tworząc unikalny plakat,
+                        który dodatkowo zawiera scentralizowany kod Spotify oraz
+                        analizę dominujących kolorów okładki.
+                    </p>
+                    <p>
+                        Praca nad tym projektem pozwoliła mi zgłębić zagadnienia
+                        związane z przetwarzaniem obrazów, integracją z
+                        zewnętrznymi API oraz tworzeniem dynamicznych grafik. To
+                        doświadczenie znacząco poszerzyło moje horyzonty w
+                        zakresie automatyzacji procesów graficznych i
+                        projektowania interaktywnych aplikacji.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a
+                        href="https://github.com/bilusss/twojpostergenerator"
+                        target="_blank"
+                        class="tech-badge"
+                    >
+                        <img
+                            src="./images/icons/github.svg"
+                            alt="GitHub icon"
+                        />
+                        Zobacz na GitHubie
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" id="modal-wordguesser">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>WordGuesser</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        WordGuesser to projekt w Pythonie, którego celem jest
+                        pomoc użytkownikom w wyszukiwaniu słów według
+                        określonych kryteriów – takich jak liczba liter,
+                        początkowe lub końcowe znaki. Program czyta dane ze
+                        słownikowego pliku tekstowego, a następnie filtruje je
+                        zgodnie z podanymi przez użytkownika warunkami.
+                    </p>
+                    <p>
+                        Projekt ten był dla mnie doskonałą okazją do nauki pracy
+                        z operacjami na plikach, manipulacji łańcuchami znaków
+                        oraz tworzenia prostych algorytmów filtrujących. Praca
+                        nad WordGuesser pozwoliła mi zrozumieć, jak ważna jest
+                        efektywna obsługa danych oraz jak można wykorzystać
+                        logikę programowania do rozwiązywania praktycznych
+                        problemów.
+                    </p>
+                    <p>
+                        Projekt ten pokazał mi również, jak zbudować
+                        interaktywną aplikację konsolową, która zachęca
+                        użytkownika do eksperymentowania z różnymi kryteriami
+                        wyszukiwania.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a
+                        href="https://github.com/bilusss/WordGuesser"
+                        target="_blank"
+                        class="tech-badge"
+                    >
+                        <img
+                            src="./images/icons/github.svg"
+                            alt="GitHub icon"
+                        />
+                        Zobacz na GitHubie
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" id="modal-calculator">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Calculator - szczegóły projektu</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Projekt Calculator to prosty kalkulator napisany w
+                        Swift, który realizuje podstawowe operacje matematyczne.
+                        Choć z założenia miał być niewielką aplikacją, praca nad
+                        nim umożliwiła mi dogłębne poznanie języka Swift oraz
+                        środowiska Xcode.
+                    </p>
+                    <p>
+                        Dzięki temu projektowi nauczyłem się nie tylko
+                        implementować logikę obliczeniową, ale także projektować
+                        intuicyjny interfejs użytkownika dostosowany do urządzeń
+                        mobilnych.
+                    </p>
+                    <p>
+                        Praca nad tym projektem była dla mnie ważnym krokiem w
+                        kierunku rozwoju aplikacji natywnych dla systemu iOS, a
+                        jednocześnie pozwoliła mi zrozumieć, jak ważne jest
+                        pisanie czytelnego i modularnego kodu.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a
+                        href="https://github.com/bilusss/Calculator"
+                        target="_blank"
+                        class="tech-badge"
+                    >
+                        <img
+                            src="./images/icons/github.svg"
+                            alt="GitHub icon"
+                        />
+                        Zobacz na GitHubie
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
