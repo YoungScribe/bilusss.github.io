@@ -67,6 +67,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+img.AppShowOff-2 {
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+}
 img.AppShowOff-4 {
     max-width: 30%;
     margin: 0 auto;
@@ -424,9 +429,9 @@ body.modal-open {
 /* Tablet (>= 768px) */
 @media screen and (min-width: 768px) {
     :root {
-        --main-font-size: 1.1rem;
-        --heading-font-size: 2.2rem;
-        --p-font-size: 1.4rem;
+        --main-font-size: 2.2rem; /*1.1*/
+        --heading-font-size: 4rem; /*2*/
+        --p-font-size: 2rem; /*1.4*/
     }
 
     .panel > div {
@@ -436,8 +441,13 @@ body.modal-open {
     img.AppShowOff-1 {
         max-width: 80%;
     }
+    img.AppShowOff-2 {
+        max-width: 60%;
+    }
+    img.AppShowOff-3,
     img.AppShowOff-4 {
-        max-width: 25%;
+        max-width: 60%;
+        margin: 0 auto var(--spacing-md);
     }
     .project-heading {
         justify-content: center;
@@ -452,39 +462,27 @@ body.modal-open {
     }
 
     .preview-or-technologies {
-            flex-direction: row;
-            align-items: center; /* Zmień z flex-start na center */
-            gap: var(--spacing-lg); /* Większy odstęp między obrazem a technologiami */
-        }
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
 
-        .preview-or-technologies img {
-            flex: 3;
-            align-self: center; /* Obrazek wycentrowany pionowo */
-        }
+    .preview-or-technologies img {
+        flex: 3;
+        align-self: center;
+    }
 
-        .tech-section {
-            flex: 2;
-            margin-top: 0;
-            padding-left: var(--spacing-md);
-            text-align: center;
-            display: flex; /* Dodaj flex dla lepszego rozmieszczenia wewnętrznych elementów */
-            flex-direction: column;
-            justify-content: center; /* Centruj w pionie */
-            align-self: center; /* Sekcja tech wycentrowana pionowo */
-            height: 100%; /* Zajmij całą dostępną wysokość */
-        }
+    .tech-section {
+        width: 100%;
+        margin-top: var(--spacing-md);
+        padding-left: 0;
+        text-align: center;
+    }
 
     .tech-badges {
         justify-content: center;
     }
 
-    /* .project-link {
-        justify-content: flex-start;
-        margin-top: var(--spacing-lg);
-        margin-left: calc(
-            var(--spacing-md) + 25%
-        ); /* Przesunięcie od lewej strony dla tablet */
-    } */
     .more-info-btn {
         font-size: 1em;
     }
@@ -524,10 +522,15 @@ body.modal-open {
     }
 
     img.AppShowOff-1 {
-        max-width: 70%;
+        max-width: 80%;
     }
+    img.AppShowOff-2 {
+        max-width: 40%;
+    }
+    img.AppShowOff-3,
     img.AppShowOff-4 {
-        max-width: 15%;
+        max-width: 60%;
+        margin: 0 auto var(--spacing-md);
     }
     .project-heading {
         justify-content: center;
@@ -543,12 +546,6 @@ body.modal-open {
     .tech-badge {
         font-size: 1em;
     }
-    /* .project-link {
-        margin-top: var(--spacing-lg);
-        margin-left: calc(
-            var(--spacing-lg) + 30%
-        );
-    } */
     .modal-content {
         width: 70%;
     }
@@ -559,6 +556,27 @@ body.modal-open {
 
     .modal-body p {
         font-size: 1.1rem;
+    }
+    .preview-or-technologies {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+
+    .preview-or-technologies img {
+        flex: 3;
+        align-self: center;
+    }
+
+    .tech-section {
+        flex: 2;
+        margin-top: 0;
+        padding-left: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        height: 100%;
     }
 }
 
@@ -573,12 +591,16 @@ body.modal-open {
     .panel > div {
         max-width: 60%;
     }
-
     img.AppShowOff-1 {
         max-width: 60%;
     }
+    img.AppShowOff-2 {
+        max-width: 20%;
+    }
+    img.AppShowOff-3,
     img.AppShowOff-4 {
         max-width: 10%;
+        margin: 0 auto var(--spacing-md);
     }
     .project-logo {
         height: 2.6em;
