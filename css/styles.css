@@ -63,19 +63,16 @@ body {
     color: var(--secondary-color);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+img.AppShowOff-1 {
+    max-height: 45vh;
 }
+
 img.AppShowOff-2 {
-    max-width: 50%;
-    margin: 0 auto;
-    display: block;
+    max-height: 40vh;
 }
+
 img.AppShowOff-4 {
-    max-width: 30%;
-    margin: 0 auto;
-    display: block;
+    max-height: 35vh;
 }
 
 .italic-text {
@@ -102,12 +99,12 @@ p {
 /*=== LAYOUT COMPONENTS ===*/
 
 .project-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    width: 100%;
+    padding-top: var(--spacing-md);
+    z-index: 10;
 }
 
 .project-heading h1 {
@@ -115,37 +112,52 @@ p {
 }
 
 .project-description {
+    width: 100%;
     max-width: 90%;
-    margin: 0 auto var(--spacing-md);
-    text-align: center;
+    margin: var(--spacing-md) auto;
+    padding-bottom: var(--spacing-md);
 }
 
 .preview-or-technologies {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    margin: auto 0;
+    overflow: visible;
+    padding: var(--spacing-md) 0;
+    min-height: 30vh;
+}
+.preview-or-technologies img {
+    max-height: 45vh;
+    max-width: 90%;
+    object-fit: contain;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tech-badges {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Upewnij się, że to jest zawsze center */
+    justify-content: center;
     gap: var(--spacing-sm);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm); /* Zmniejsz z var(--spacing-md) */
 }
 
 .tech-badge {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 2rem;
-    padding: 0.4em 0.8em;
+    padding: 0.3em 0.7em;
     font-family: var(--secondary-font);
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: bold;
     color: var(--secondary-color);
     display: inline-flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.4em;
     transition:
         transform 0.2s,
         background-color 0.2s;
@@ -164,16 +176,18 @@ p {
 }
 
 .tech-section {
-    margin-top: var(--spacing-md);
-    text-align: center;
     width: 100%;
+    text-align: center;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    position: static;
+    background-color: inherit;
+    z-index: 5;
+    padding-top: var(--spacing-sm);
 }
 
 .tech-section h2 {
-    font-size: 1.2em;
-    color: var(--primary-color);
     margin-bottom: var(--spacing-sm);
-    text-align: center;
 }
 
 .project-logo {
@@ -183,11 +197,14 @@ p {
 }
 
 .project-link {
+    position: static;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: var(--spacing-lg);
-    position: relative;
-    margin-left: 0;
+    padding-bottom: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    background-color: inherit;
+    z-index: 10;
 }
 
 .project-link .tech-badge {
@@ -208,6 +225,18 @@ p {
     height: 1.4em;
 }
 
+header {
+    width: 100%;
+}
+footer {
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -407,6 +436,12 @@ body.modal-open {
 
 .panel > div {
     max-width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: var(--spacing-lg);
+    padding-bottom: calc(var(--spacing-lg) * 2);
 }
 
 /*=== COLORS OF SLIDES ===*/
@@ -429,32 +464,13 @@ body.modal-open {
 /* Tablet (>= 768px) */
 @media screen and (min-width: 768px) {
     :root {
-        --main-font-size: 2.2rem; /*1.1*/
-        --heading-font-size: 4rem; /*2*/
-        --p-font-size: 2rem; /*1.4*/
+        --main-font-size: 0.9rem;
+        --heading-font-size: 1.8rem;
+        --p-font-size: 1.2rem;
     }
 
     .panel > div {
         max-width: 80%;
-    }
-
-    img.AppShowOff-1 {
-        max-width: 80%;
-    }
-    img.AppShowOff-2 {
-        max-width: 60%;
-    }
-    img.AppShowOff-3,
-    img.AppShowOff-4 {
-        max-width: 60%;
-        margin: 0 auto var(--spacing-md);
-    }
-    .project-heading {
-        justify-content: center;
-    }
-
-    .project-logo {
-        height: 2.2em;
     }
 
     .project-description {
@@ -463,120 +479,54 @@ body.modal-open {
 
     .preview-or-technologies {
         flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-md);
+        padding: var(--spacing-lg) 0;
     }
 
     .preview-or-technologies img {
-        flex: 3;
-        align-self: center;
-    }
-
-    .tech-section {
-        width: 100%;
-        margin-top: var(--spacing-md);
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .tech-badges {
-        justify-content: center;
-    }
-
-    .more-info-btn {
-        font-size: 1em;
-    }
-
-    .modal-content {
-        width: 80%;
-    }
-
-    .modal-header h2 {
-        font-size: 2rem;
+        max-height: 40vh;
+        max-width: 70%;
+        margin-bottom: var(--spacing-lg);
     }
 }
 
 /* Desktop (>= 1024px) */
 @media screen and (min-width: 1024px) {
     :root {
-        --main-font-size: 1.2rem;
-        --heading-font-size: 2.8rem;
-        --p-font-size: 1.6rem;
-    }
-
-    body {
-        padding: var(--spacing-lg);
+        --main-font-size: 1rem;
+        --heading-font-size: 2.2rem;
+        --p-font-size: 1.4rem;
     }
 
     .panel > div {
         max-width: 70%;
     }
 
-    h1,
-    b {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    p {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    img.AppShowOff-1 {
-        max-width: 80%;
-    }
-    img.AppShowOff-2 {
-        max-width: 40%;
-    }
-    img.AppShowOff-3,
-    img.AppShowOff-4 {
-        max-width: 60%;
-        margin: 0 auto var(--spacing-md);
-    }
-    .project-heading {
-        justify-content: center;
-        gap: var(--spacing-md);
-    }
-    .project-logo {
-        height: 2.4em;
-    }
     .project-description {
         max-width: 70%;
     }
 
-    .tech-badge {
-        font-size: 1em;
-    }
-    .modal-content {
-        width: 70%;
-    }
-
-    .modal-header h2 {
-        font-size: 2.2rem;
-    }
-
-    .modal-body p {
-        font-size: 1.1rem;
-    }
     .preview-or-technologies {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--spacing-lg);
+        padding: var(--spacing-lg) 0;
     }
 
     .preview-or-technologies img {
-        flex: 3;
-        align-self: center;
+        max-height: 50vh;
+        max-width: 60%;
+        margin-bottom: var(--spacing-lg);
+    }
+    .tech-section {
+        margin-bottom: var(--spacing-md);
+    }
+    .tech-badge {
+        font-size: 0.9em;
+        padding: 0.3em 0.8em;
     }
 
-    .tech-section {
-        flex: 2;
-        margin-top: 0;
-        padding-left: var(--spacing-md);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
-        height: 100%;
+    .tech-badges {
+        gap: var(--spacing-md);
+    }
+    img.AppShowOff-4 {
+        max-width: 25%; /* Mniejszy rozmiar na desktopie */
     }
 }
 
