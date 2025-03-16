@@ -1,6 +1,6 @@
 $(function () {
   var controller = new ScrollMagic.Controller();
-  var amount = 3; // Define amount of slides
+  var amount = 4; // Define amount of slides
   updateCSSVariables(amount); // Update CSS variables
   var wipeAnimation = gsap.timeline();
   for (var i = 1; i < amount; i++) {
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById(modalId);
     if (modal) {
       modal.classList.remove("active");
-
       // Poczekaj na zakończenie animacji przed ukryciem
       setTimeout(function () {
         modal.style.display = "none";

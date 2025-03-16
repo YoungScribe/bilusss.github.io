@@ -174,6 +174,7 @@ p {
     justify-content: center;
     margin-top: var(--spacing-lg);
     position: relative;
+    margin-left: 0;
 }
 
 .project-link .tech-badge {
@@ -459,13 +460,13 @@ body.modal-open {
         justify-content: flex-start;
     }
 
-    .project-link {
+    /* .project-link {
         justify-content: flex-start;
         margin-top: var(--spacing-lg);
         margin-left: calc(
             var(--spacing-md) + 25%
         ); /* Przesunięcie od lewej strony dla tablet */
-    }
+    } */
     .more-info-btn {
         font-size: 1em;
     }
@@ -521,12 +522,12 @@ body.modal-open {
     .tech-badge {
         font-size: 1em;
     }
-    .project-link {
+    /* .project-link {
         margin-top: var(--spacing-lg);
         margin-left: calc(
             var(--spacing-lg) + 30%
         ); /* Większe przesunięcie dla desktop */
-    }
+    } */
     .modal-content {
         width: 70%;
     }
