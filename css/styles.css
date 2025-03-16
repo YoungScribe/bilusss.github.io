@@ -67,6 +67,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+img.AppShowOff-4 {
+    max-width: 30%;
+    margin: 0 auto;
+    display: block;
+}
 
 .italic-text {
     font-style: italic;
@@ -120,7 +125,7 @@ p {
 .tech-badges {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Upewnij się, że to jest zawsze center */
     gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
 }
@@ -155,12 +160,15 @@ p {
 
 .tech-section {
     margin-top: var(--spacing-md);
+    text-align: center;
+    width: 100%;
 }
 
 .tech-section h2 {
     font-size: 1.2em;
     color: var(--primary-color);
     margin-bottom: var(--spacing-sm);
+    text-align: center;
 }
 
 .project-logo {
@@ -428,6 +436,9 @@ body.modal-open {
     img.AppShowOff-1 {
         max-width: 80%;
     }
+    img.AppShowOff-4 {
+        max-width: 25%;
+    }
     .project-heading {
         justify-content: center;
     }
@@ -441,23 +452,30 @@ body.modal-open {
     }
 
     .preview-or-technologies {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+            flex-direction: row;
+            align-items: center; /* Zmień z flex-start na center */
+            gap: var(--spacing-lg); /* Większy odstęp między obrazem a technologiami */
+        }
 
-    .preview-or-technologies img {
-        flex: 3;
-    }
+        .preview-or-technologies img {
+            flex: 3;
+            align-self: center; /* Obrazek wycentrowany pionowo */
+        }
 
-    .tech-section {
-        flex: 2;
-        margin-top: 0;
-        padding-left: var(--spacing-md);
-        text-align: left;
-    }
+        .tech-section {
+            flex: 2;
+            margin-top: 0;
+            padding-left: var(--spacing-md);
+            text-align: center;
+            display: flex; /* Dodaj flex dla lepszego rozmieszczenia wewnętrznych elementów */
+            flex-direction: column;
+            justify-content: center; /* Centruj w pionie */
+            align-self: center; /* Sekcja tech wycentrowana pionowo */
+            height: 100%; /* Zajmij całą dostępną wysokość */
+        }
 
     .tech-badges {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     /* .project-link {
@@ -508,6 +526,9 @@ body.modal-open {
     img.AppShowOff-1 {
         max-width: 70%;
     }
+    img.AppShowOff-4 {
+        max-width: 15%;
+    }
     .project-heading {
         justify-content: center;
         gap: var(--spacing-md);
@@ -526,7 +547,7 @@ body.modal-open {
         margin-top: var(--spacing-lg);
         margin-left: calc(
             var(--spacing-lg) + 30%
-        ); /* Większe przesunięcie dla desktop */
+        );
     } */
     .modal-content {
         width: 70%;
@@ -555,6 +576,9 @@ body.modal-open {
 
     img.AppShowOff-1 {
         max-width: 60%;
+    }
+    img.AppShowOff-4 {
+        max-width: 10%;
     }
     .project-logo {
         height: 2.6em;
