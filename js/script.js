@@ -20,7 +20,6 @@ $(function () {
   }
 
   // create scene to pin and link animation
-  console.log((amount + 1) * 100 + "%");
   new ScrollMagic.Scene({
     triggerElement: "#pinContainer",
     triggerHook: "onLeave",

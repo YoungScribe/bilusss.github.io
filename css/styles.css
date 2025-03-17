@@ -2,7 +2,7 @@
 
 :root {
     /* Slides */
-    --slide-amount: 3; /* Default 4 slides */
+    --slide-amount: 4; /* Default 4 slides */
     --slide-container-width: calc(100% * var(--slide-amount));
     --panel-width: calc(100% / var(--slide-amount));
 
@@ -15,9 +15,10 @@
     /* Typography - Mobile first */
     --main-font: "DM Serif Text", serif;
     --secondary-font: Arial, sans-serif;
-    --main-font-size: 1rem;
-    --heading-font-size: 1.8rem;
-    --p-font-size: 1.2rem;
+    --main-font-size: 0.8rem;
+    --heading-font-size: 2.3rem;
+    --heading-2-font-size: 1.3rem;
+    --p-font-size: 1rem;
 
     /* Colors */
     --primary-color: #f39422;
@@ -59,20 +60,11 @@ body {
     background: var(--background-color);
     font-family: var(--main-font);
     font-size: var(--main-font-size);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     color: var(--secondary-color);
 }
-
-img.AppShowOff-1 {
-    max-height: 45vh;
-}
-
-img.AppShowOff-2 {
-    max-height: 40vh;
-}
-
-img.AppShowOff-4 {
-    max-height: 35vh;
+img {
+    max-width: 90%;
 }
 
 .italic-text {
@@ -81,19 +73,34 @@ img.AppShowOff-4 {
 
 /*=== TYPOGRAPHY ===*/
 
-h1,
-b {
+h1 {
     color: var(--primary-color);
     font-size: var(--heading-font-size);
     margin-bottom: var(--spacing-md);
     font-weight: bold;
-    /* line-height: 1.2; */
+}
+h1.trading {
+    font-size: var(--heading-font-size);
+}
+h1.poster {
+    font-size: calc(var(--heading-font-size) * 0.9);
+}
+h2 {
+    color: var(--primary-color);
+    font-size: var(--heading-2-font-size);
+    margin-bottom: var(--spacing-md);
+    font-weight: bold;
+}
+b {
+    color: var(--primary-color);
+    font-size: var(--heading-2-font-size);
+    margin-bottom: var(--spacing-md);
+    font-weight: bold;
 }
 p {
     color: var(--secondary-color);
     font-size: var(--p-font-size);
-    margin-bottom: var(--spacing-md);
-    /* line-height: 1.5; */
+    margin-bottom: 0;
 }
 
 /*=== LAYOUT COMPONENTS ===*/
@@ -103,39 +110,43 @@ p {
     top: 0;
     background-color: inherit;
     width: 100%;
-    padding-top: var(--spacing-md);
-    z-index: 10;
+    padding-top: 0;
 }
 
 .project-heading h1 {
     margin-bottom: 0;
 }
 
+.project-logo {
+    height: 2em;
+    width: auto;
+    vertical-align: middle;
+}
 .project-description {
     width: 100%;
     max-width: 90%;
-    margin: var(--spacing-md) auto;
-    padding-bottom: var(--spacing-md);
+    margin: auto;
+    padding-bottom: auto;
 }
 
-.preview-or-technologies {
+.preview {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: auto 0;
+    margin: auto var(--spacing-md);
     overflow: visible;
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
     min-height: 30vh;
 }
-.preview-or-technologies img {
+.preview img {
     max-height: 45vh;
     max-width: 90%;
     object-fit: contain;
-    margin: 0 auto var(--spacing-lg);
-    border-radius: 8px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -144,7 +155,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-sm);
-    margin-top: var(--spacing-sm); /* Zmniejsz z var(--spacing-md) */
+    margin-top: var(--spacing-sm);
 }
 
 .tech-badge {
@@ -180,24 +191,12 @@ p {
     text-align: center;
     margin-top: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
-    position: static;
     background-color: inherit;
     z-index: 5;
     padding-top: var(--spacing-sm);
 }
 
-.tech-section h2 {
-    margin-bottom: var(--spacing-sm);
-}
-
-.project-logo {
-    height: 2em;
-    width: auto;
-    vertical-align: middle;
-}
-
 .project-link {
-    position: static;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -208,7 +207,6 @@ p {
 }
 
 .project-link .tech-badge {
-    /* Specjalne style dla odznaki GitHub */
     background-color: rgba(255, 255, 255, 0.15);
     font-size: 1.1em;
     padding: 0.5em 1.2em;
@@ -314,9 +312,9 @@ a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.modal-header h2 {
+.modal-header h1 {
     color: var(--modal-text-color);
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     margin: 0;
     font-weight: bold;
 }
@@ -408,7 +406,7 @@ body.modal-open {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
 }
 
 #pinContainer {
@@ -431,17 +429,17 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-md);
+    padding: 0.5rem;
 }
 
 .panel > div {
-    max-width: 90%;
+    max-width: 95%;
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: var(--spacing-lg);
-    padding-bottom: calc(var(--spacing-lg) * 2);
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing);
 }
 
 /*=== COLORS OF SLIDES ===*/
@@ -477,12 +475,12 @@ body.modal-open {
         max-width: 80%;
     }
 
-    .preview-or-technologies {
+    .preview {
         flex-direction: column;
         padding: var(--spacing-lg) 0;
     }
 
-    .preview-or-technologies img {
+    .preview img {
         max-height: 40vh;
         max-width: 70%;
         margin-bottom: var(--spacing-lg);
@@ -505,11 +503,11 @@ body.modal-open {
         max-width: 70%;
     }
 
-    .preview-or-technologies {
+    .preview {
         padding: var(--spacing-lg) 0;
     }
 
-    .preview-or-technologies img {
+    .preview img {
         max-height: 50vh;
         max-width: 60%;
         margin-bottom: var(--spacing-lg);
