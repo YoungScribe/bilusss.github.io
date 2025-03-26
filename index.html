@@ -1,536 +1,1106 @@
 <!doctype html>
-<html>
+<html lang="en" class="no-js">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Łukasz Bilski</title>
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
-            rel="stylesheet"
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <!-- svg icons from - simpleicons.org/ -->
-        <link rel="icon" href="./favicon.ico" sizes="any" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./favicon-32x32.png"
+        <meta name="description" content="Personal website Łukasz Bilski" />
+        <meta
+            name="keywords"
+            content="Łukasz Bilski, website, resume, portfolio"
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./favicon-16x16.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./apple-touch-icon.png"
-        />
-        <link rel="manifest" href="./site.webmanifest" />
-        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="theme-color" content="#010038" />
+        <meta name="author" content="Łukasz Bilski" />
+        <link rel="shortcut icon" href="img/favicon_io/favicon.ico" />
+        <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+        <script src="js/modernizr.custom.js"></script>
     </head>
-    <body>
-        <div id="main">
-            <h1>Cześć! Tu Łukasz Bilski</h1>
-            <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-            <img src="./images/duck.gif" alt="coding duck gif" />
+
+    <body class="page">
+        <div class="lb-animated-bg"></div>
+
+        <!-- Loading animation -->
+        <div class="preloader">
+            <div class="preloader-animation">
+                <div class="preloader-spinner"></div>
+            </div>
         </div>
-        <div id="pinContainer">
-            <div id="slideContainer">
-                <!-- Containers here: -->
-                <!-- If you change amount in js, change sections below-->
-                <section class="panel one">
-                    <div>
-                        <div class="project-heading">
-                            <h1>TradingSignalApp</h1>
-                            <img
-                                class="project-logo"
-                                src="./images/TradingSignal/TS_logo.png"
-                                alt="TradingViewApp logo"
-                            />
+        <!-- /Loading animation -->
+        <div class="page-scroll">
+            <div
+                id="page_container"
+                class="page-container bg-move-effect"
+                data-animation="transition-flip-in-right"
+            >
+                <!-- Header -->
+                <header id="site_header" class="header">
+                    <div class="header-content clearfix">
+                        <!-- Text Logo -->
+                        <div class="text-logo">
+                            <a href="index.html">
+                                <div class="logo-symbol">Ł</div>
+                                <div class="logo-text">
+                                    Łukasz <span>Bilski</span>
+                                </div>
+                            </a>
                         </div>
-                        <!-- Przycisk "Więcej informacji" w sekcji projektu -->
-                        <div class="project-description">
-                            <p>
-                                Internetowa aplikacja do śledzenia portfela,
-                                umożliwiająca dodawanie monet i przeglądanie
-                                najpopularniejszych par kryptowalut dzięki
-                                Binance API
-                            </p>
-                            <button
-                                class="more-info-btn"
-                                data-modal="modal-tradingsignalapp"
+                        <!-- /Text Logo -->
+
+                        <!-- Navigation -->
+                        <div class="site-nav mobile-menu-hide">
+                            <ul class="classic-menu site-main-menu">
+                                <li class="menu-item current-menu-item">
+                                    <a href="#section1">About Me</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#section2">Resume</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#section3">Portfolio</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#section4">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <a class="menu-toggle mobile-visible">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <!-- Mobile Menu Toggle -->
+                    </div>
+                </header>
+                <!-- /Header -->
+
+                <!-- MAIN -->
+                <div id="main" class="site-main">
+                    <div
+                        id="main-content"
+                        class="single-page-content"
+                        id="section1"
+                    >
+                        <div id="primary" class="content-area">
+                            <div
+                                id="content"
+                                class="page-content site-content single-post"
+                                role="main"
                             >
-                                Więcej informacji
-                            </button>
+                                <!-- Home Page Top Part -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="home-content">
+                                            <div class="row flex-v-align">
+                                                <div
+                                                    class="col-sm-12 col-md-5 col-lg-5"
+                                                >
+                                                    <div class="home-photo">
+                                                        <div
+                                                            class="hp-inner"
+                                                            style="
+                                                                background-image: url(./img/photo.png);
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="col-sm-12 col-md-7 col-lg-7"
+                                                >
+                                                    <div
+                                                        class="home-text hp-left"
+                                                    >
+                                                        <div
+                                                            class="owl-carousel text-rotation"
+                                                        >
+                                                            <div class="item">
+                                                                <h4>
+                                                                    2nd year ICT
+                                                                    Student at
+                                                                    AGH UST
+                                                                </h4>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <h4>
+                                                                    Curious
+                                                                    student of
+                                                                    modern
+                                                                    trends
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                        <h1>Łukasz Bilski</h1>
+                                                        <p>
+                                                            I am an ambitious
+                                                            student who follows
+                                                            new technology
+                                                            trends, especially
+                                                            in blockchain and
+                                                            AI. I have
+                                                            programming skills
+                                                            in C++, Java and
+                                                            Python, which
+                                                            enables me to create
+                                                            innovative
+                                                            solutions. I am
+                                                            studying computer
+                                                            science at AGH
+                                                            University of
+                                                            Science and
+                                                            Technology in
+                                                            Krakow. In my free
+                                                            time, I am very
+                                                            passionate about gym
+                                                            and running.
+                                                        </p>
+
+                                                        <div
+                                                            class="home-buttons"
+                                                        >
+                                                            <a
+                                                                href="cv/CV_ENG.pdf"
+                                                                target="_blank"
+                                                                class="btn btn-primary"
+                                                                >Download CV</a
+                                                            >
+
+                                                            <a
+                                                                href="https://www.github.com/bilusss"
+                                                                target="_blank"
+                                                                class="btn btn-primary"
+                                                                >Github</a
+                                                            >
+                                                            <a
+                                                                href="#section4"
+                                                                target="_self"
+                                                                class="btn btn-primary"
+                                                                >Contact</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Home Page Top Part -->
+
+                                <!-- Services -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="p-50"></div>
+
+                                        <div class="block-title">
+                                            <h2>What I Do</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="info-list-w-icon">
+                                            <div class="info-block-w-icon">
+                                                <div class="ci-icon">
+                                                    <i
+                                                        class="linecons linecons-pen"
+                                                    ></i>
+                                                </div>
+
+                                                <div class="ci-text">
+                                                    <h4>Learn</h4>
+                                                    <p>
+                                                        I am an ICT student at
+                                                        AGH. Where I learn about
+                                                        network protocols such
+                                                        as TCP/IP and DNS,
+                                                        recently on the Internet
+                                                        of Things (IoT) and
+                                                        more. I combine theory
+                                                        and practice, preparing
+                                                        to create innovations in
+                                                        technology.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="info-block-w-icon">
+                                                <div class="ci-icon">
+                                                    <i
+                                                        class="linecons linecons-lab"
+                                                    ></i>
+                                                </div>
+
+                                                <div class="ci-text">
+                                                    <h4>
+                                                        Research Groups /
+                                                        Organizations
+                                                    </h4>
+                                                    <p>
+                                                        At AGH Blockchain, I
+                                                        explore blockchain
+                                                        technology,
+                                                        cryptocurrencies, DeFi
+                                                        and NFT. (Hopefully
+                                                        soon, with BEST AGH, I
+                                                        develop leadership
+                                                        skills and network at
+                                                        projects like
+                                                        Engineering Job Fair and
+                                                        Hackathon.)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="info-list-w-icon">
+                                            <div class="info-block-w-icon">
+                                                <div class="ci-icon">
+                                                    <i
+                                                        class="linecons linecons-display"
+                                                    ></i>
+                                                </div>
+                                                <div class="ci-text">
+                                                    <h4>Programming</h4>
+                                                    <p>
+                                                        There are projects on my
+                                                        GitHub , including a
+                                                        crypto-currency
+                                                        portfolio tracker
+                                                        web-app in Java, a
+                                                        poster generator in
+                                                        Python, wordguesser in
+                                                        Python and a calculator
+                                                        in Swift and many more.
+                                                        These demonstrate my
+                                                        versatility and ability
+                                                        to solve real-world
+                                                        problems.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="info-block-w-icon">
+                                                <div class="ci-icon">
+                                                    <i
+                                                        class="linecons linecons-fire"
+                                                    ></i>
+                                                </div>
+                                                <div class="ci-text">
+                                                    <h4>Sports</h4>
+                                                    <p>
+                                                        I regularly work out at
+                                                        the gym, run and swim,
+                                                        which keeps me in shape.
+                                                        These activities help me
+                                                        reduce stress and stay
+                                                        mentally fit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Services -->
+
+                                <!-- Fun Facts -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="block-title">
+                                            <h2>Fun Facts About Me</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-3">
+                                        <div class="lb-info-block gray-default">
+                                            <i
+                                                class="linecons linecons-heart"
+                                            ></i>
+                                            <h4>First programming language</h4>
+                                            <span class="lb-info-block-value"
+                                                >C++ '19</span
+                                            >
+                                            <span
+                                                class="lb-info-block-text"
+                                            ></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-3">
+                                        <div class="lb-info-block gray-default">
+                                            <i
+                                                class="linecons linecons-clock"
+                                            ></i>
+                                            <h4>My first half-marathon</h4>
+                                            <span class="lb-info-block-value"
+                                                >Oct '24</span
+                                            >
+                                            <span
+                                                class="lb-info-block-text"
+                                            ></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-3">
+                                        <div class="lb-info-block gray-default">
+                                            <i
+                                                class="linecons linecons-star"
+                                            ></i>
+                                            <h4>Countries visited</h4>
+                                            <span class="lb-info-block-value"
+                                                >13</span
+                                            >
+                                            <span
+                                                class="lb-info-block-text"
+                                            ></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-3">
+                                        <div class="lb-info-block gray-default">
+                                            <i
+                                                class="linecons linecons-cup"
+                                            ></i>
+                                            <h4>Gym experience</h4>
+                                            <span class="lb-info-block-value"
+                                                >4+years</span
+                                            >
+                                            <span
+                                                class="lb-info-block-text"
+                                            ></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Fun Facts -->
+
+                                <div class="p-40"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RESUME -->
+                    <div class="page-title" id="section2">
+                        <h1>Resume</h1>
+                        <div class="page-subtitle">
+                            <h4>3+ Years of Constant Programming</h4>
+                        </div>
+                    </div>
+
+                    <div
+                        id="content"
+                        class="page-content site-content single-post"
+                        role="main"
+                    >
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="block-title">
+                                    <h2>Education</h2>
+                                </div>
+
+                                <div id="timeline_1" class="timeline clearfix">
+                                    <div class="timeline-item clearfix">
+                                        <h5 class="item-period">
+                                            2023 - Current
+                                        </h5>
+                                        <span class="item-company"
+                                            >AGH University of Science and
+                                            Technology in Krakow</span
+                                        >
+                                        <h4 class="item-title">
+                                            2nd year ICT Student
+                                        </h4>
+                                        <p>
+                                            I am studying Teleinformatics at AGH
+                                            University of Science and
+                                            Technology, blending computer
+                                            science and telecommunications. I
+                                            code in C++, Java, and Python, and
+                                            study network design, data
+                                            transmission, and system security.
+                                            I’m gaining skills in cloud
+                                            computing, cybersecurity, and data
+                                            analytics, preparing me for a
+                                            versatile IT career.
+                                        </p>
+                                    </div>
+
+                                    <div class="timeline-item clearfix">
+                                        <h5 class="item-period">2019-2023</h5>
+                                        <span class="item-company"
+                                            >3rd General Secondary School
+                                            Dionizy Czachowski in Radom</span
+                                        >
+                                        <h4 class="item-title">
+                                            Academic focus on Mathematics,
+                                            Physics, and Computer Science
+                                        </h4>
+                                        <p>
+                                            I attended high school with a strong
+                                            focus on Mathematics, Physics,
+                                            Computer Science, English, and
+                                            German. I scored 100% on the basic
+                                            Mathematics exam and 88% on the
+                                            advanced level, along with 93% in
+                                            basic English, 82% in advanced
+                                            English, and 60% in advanced
+                                            Computer Science. My education
+                                            emphasized analytical thinking and
+                                            problem-solving skills across these
+                                            subjects.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-xs-12 col-sm-6">
+                                    <div class="block-title">
+                                        <h2>Experience</h2>
+                                    </div>
+
+                                    <div
+                                        id="timeline_2"
+                                        class="timeline clearfix"
+                                    >
+                                        <div class="timeline-item clearfix">
+                                            <h5 class="item-period current">
+
+                                            </h5>
+                                            <span class="item-company"
+                                                ></span
+                                            >
+                                            <h4 class="item-title">
+
+                                            </h4>
+                                            <p>
+
+                                            </p>
+                                        </div>
+
+                                        <div class="timeline-item clearfix">
+                                            <h5 class="item-period">
+
+                                            </h5>
+                                            <span class="item-company"
+                                                ></span
+                                            >
+                                            <h4 class="item-title">
+
+                                            </h4>
+                                            <p>
+
+                                            </p>
+                                        </div>
+
+                                        <div class="timeline-item clearfix">
+                                            <h5 class="item-period">
+
+                                            </h5>
+                                            <span class="item-company"
+                                                ></span
+                                            >
+                                            <h4 class="item-title">
+
+                                            </h4>
+                                            <p>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> -->
                         </div>
 
-                        <div class="preview-or-technologies">
-                            <img
-                                class="AppShowOff-1"
-                                src="./images/TradingSignal/AppShowOff.gif"
-                                alt="TradingViewApp Show-Off as a gif"
-                            />
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="p-20"></div>
 
-                            <div class="tech-section">
-                                <h2>Technologie:</h2>
-                                <div class="tech-badges">
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/java.svg"
-                                            alt="Java icon"
-                                        />
-                                        Java
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/spring.svg"
-                                            alt="Spring icon"
-                                        />
-                                        Spring Boot
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/html5.svg"
-                                            alt="HTML5 icon"
-                                        />
-                                        HTML5
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/css3.svg"
-                                            alt="CSS3 icon"
-                                        />
-                                        CSS3
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/javascript.svg"
-                                            alt="JavaScript icon"
-                                        />
-                                        JavaScript
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/docker.svg"
-                                            alt="Docker icon"
-                                        />
-                                        Docker
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/postgresql.svg"
-                                            alt="PostgreSQL icon"
-                                        />
-                                        PostgreSQL
-                                    </span>
+                                <div class="block-title">
+                                    <h2>Certificates</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="project-link">
-                            <a
-                                href="https://github.com/bilusss/TradingSignalApp"
-                                target="_blank"
-                            >
-                                <span class="tech-badge">
-                                    <img
-                                        src="./images/icons/github.svg"
-                                        alt="GitHub icon"
-                                    />
-                                    GitHub
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section class="panel two">
-                    <div>
-                        <div class="project-heading">
-                            <h1>TwojPosterGenerator</h1>
-                            <img
-                                class="project-logo"
-                                src="./images/icons/spotify.svg"
-                                alt="spotify logo"
-                            />
-                        </div>
-                        <div class="project-description">
-                            <p>
-                                Aplikacja generująca plakaty muzyczne,
-                                pobierająca dane o albumach, artystach i
-                                utworach dzięki Spotify API
-                            </p>
-                            <button
-                                class="more-info-btn"
-                                data-modal="modal-twojpostergenerator"
-                            >
-                                Więcej informacji
-                            </button>
-                        </div>
-                        <div class="preview-or-technologies">
-                            <img
-                                class="AppShowOff-2"
-                                src="./images/twojpostergenerator/AppShowOff.jpg"
-                                alt="TwojPosterGenerator Show-Off"
-                            />
-                            <div class="tech-section">
-                                <h2>Technologie:</h2>
-                                <div class="tech-badges">
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/python.svg"
-                                            alt="Python icon"
-                                        />
-                                        Python
-                                    </span>
-                                    <span class="tech-badge">Pillow (PIL)</span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/spotify.svg"
-                                            alt="Spotify icon"
-                                        />
-                                        Spotipy
-                                    </span>
-                                    <span class="tech-badge"> Requests </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-link">
-                            <a
-                                href="https://github.com/bilusss/twojpostergenerator"
-                                target="_blank"
-                            >
-                                <span class="tech-badge">
-                                    <img
-                                        src="./images/icons/github.svg"
-                                        alt="GitHub icon"
-                                    />
-                                    GitHub
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section class="panel three">
-                    <div>
-                        <div class="project-heading">
-                            <h1>WordGuesser</h1>
-                            <!-- Możesz dodać logo jeśli dostępne -->
-                        </div>
-                        <div class="project-description">
-                            <p>
-                                Pythonowa aplikacja filtrująca słowa z pliku
-                                według kryteriów, takich jak liczba liter oraz
-                                określone początkowe i końcowe znaki
-                            </p>
-                            <button
-                                class="more-info-btn"
-                                data-modal="modal-wordguesser"
-                            >
-                                Więcej informacji
-                            </button>
-                        </div>
-                        <div class="preview-or-technologies">
-                            <!-- Jeśli masz GIF lub obraz do pokazania, odkomentuj poniższe -->
-                            <!-- <img
-                        class="AppShowOff-3"
-                        src="./images/WordGuesser/AppShowOff.gif"
-                        alt="WordGuesser Show-Off as a gif"
-                      /> -->
 
-                            <div class="tech-section">
-                                <h2>Technologie:</h2>
-                                <div class="tech-badges">
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/python.svg"
-                                            alt="Python icon"
-                                        />
-                                        Python
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-link">
-                            <a
-                                href="https://github.com/bilusss/WordGuesser"
-                                target="_blank"
-                            >
-                                <span class="tech-badge">
-                                    <img
-                                        src="./images/icons/github.svg"
-                                        alt="GitHub icon"
-                                    />
-                                    GitHub
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section class="panel four">
-                    <div>
-                        <div class="project-heading">
-                            <h1>Calculator</h1>
-                        </div>
-                        <div class="project-description">
-                            <p>
-                                Mobilna aplikacja kalkulatora napisana w języku
-                                Swift, realizująca podstawowe operacje
-                                matematyczne z intuicyjnym interfejsem dla
-                                urządzeń iOS
-                            </p>
-                            <button
-                                class="more-info-btn"
-                                data-modal="modal-calculator"
-                            >
-                                Więcej informacji
-                            </button>
-                        </div>
-                        <div class="preview-or-technologies">
-                            <img
-                                class="AppShowOff-4"
-                                src="./images/calculator/AppShowOff.png"
-                                alt="Calculator App Show-Off as a gif"
-                            />
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/programming-in-python?authProvider=agh-university-of-krakow"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="./img/logos/MetaLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
 
-                            <div class="tech-section">
-                                <h2>Technologie:</h2>
-                                <div class="tech-badges">
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/swift.svg"
-                                            alt="Swift icon"
-                                        />
-                                        Swift
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/xcode.svg"
-                                            alt="Xcode icon"
-                                        />
-                                        Xcode
-                                    </span>
-                                    <span class="tech-badge">
-                                        <img
-                                            src="./images/icons/ios.svg"
-                                            alt="iOS icon"
-                                        />
-                                        iOS
-                                    </span>
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>Programming in Python</h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (soon)</span
+                                                >
+                                            </div>
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>Meta</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/python-for-applied-data-science-ai?authProvider=agh-university-of-krakow"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="img/logos/IBMLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
+
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>
+                                                    Python for Data Science, AI
+                                                    & Development
+                                                </h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (Soon)</span
+                                                >
+                                            </div>
+
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>IBM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/generative-ai-boost-your-cybersecurity-career"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="img/logos/IBMLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
+
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>
+                                                    Generative AI: Boost Your
+                                                    Cybersecurity Career
+                                                </h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (Soon)</span
+                                                >
+                                            </div>
+
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>IBM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/machine-learning-with-python?authProvider=agh-university-of-krakow"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="img/logos/IBMLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
+
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>
+                                                    Machine Learning with Python
+                                                </h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (Soon)</span
+                                                >
+                                            </div>
+
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>IBM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/generative-ai-prompt-engineering-for-everyone?authProvider=agh-university-of-krakow"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="img/logos/IBMLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
+
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>
+                                                    Generative AI: Prompt
+                                                    Engineering Basics
+                                                </h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (Soon)</span
+                                                >
+                                            </div>
+
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>IBM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <a
+                                    href="https://www.coursera.org/programs/career-academy-for-students-yavet/learn/introduction-to-ai?authProvider=agh-university-of-krakow"
+                                    target="_blank"
+                                >
+                                    <div class="certificate-item clearfix">
+                                        <div class="certi-logo">
+                                            <img
+                                                src="img/logos/IBMLogo.png"
+                                                alt="logo"
+                                            />
+                                        </div>
+
+                                        <div class="certi-content">
+                                            <div class="certi-title">
+                                                <h4>
+                                                    Introduction to Artificial
+                                                    Intelligence (AI)
+                                                </h4>
+                                            </div>
+
+                                            <div class="certi-id">
+                                                <span
+                                                    >Membership ID: (Soon)</span
+                                                >
+                                            </div>
+
+                                            <div class="certi-date">
+                                                <span>Soon</span>
+                                            </div>
+
+                                            <div class="certi-company">
+                                                <span>IBM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="p-40"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="block-title">
+                                    <h2>Coding Skills</h2>
+                                </div>
+
+                                <div
+                                    id="skills_1"
+                                    class="skills-info skills-first-style"
+                                >
+                                    <!-- Skill 1 -->
+                                    <div class="clearfix">
+                                        <h4>Python</h4>
+                                        <div class="skill-value">80%</div>
+                                    </div>
+                                    <div
+                                        id="skill_1"
+                                        data-value="80"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 1 -->
+
+                                    <!-- Skill 2 -->
+                                    <div class="clearfix">
+                                        <h4>Java</h4>
+                                        <div class="skill-value">70%</div>
+                                    </div>
+                                    <div
+                                        id="skill_2"
+                                        data-value="70"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 2 -->
+
+                                    <!-- Skill 3 -->
+                                    <div class="clearfix">
+                                        <h4>C++</h4>
+                                        <div class="skill-value">65%</div>
+                                    </div>
+                                    <div
+                                        id="skill_3"
+                                        data-value="65"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 3 -->
+
+                                    <!-- Skill 4 -->
+                                    <div class="clearfix">
+                                        <h4>JS</h4>
+                                        <div class="skill-value">55%</div>
+                                    </div>
+                                    <div
+                                        id="skill_4"
+                                        data-value="55"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 4 -->
+
+                                    <!-- Skill 5 -->
+                                    <div class="clearfix">
+                                        <h4>Swift</h4>
+                                        <div class="skill-value">35%</div>
+                                    </div>
+                                    <div
+                                        id="skill_5"
+                                        data-value="35"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 5 -->
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="block-title">
+                                    <h2>Languages / Soft Skills</h2>
+                                </div>
+
+                                <div
+                                    id="skills_2"
+                                    class="skills-info skills-first-style"
+                                >
+                                    <!-- Skill 6 -->
+                                    <div class="clearfix">
+                                        <h4>English</h4>
+                                        <div class="skill-value">85%</div>
+                                    </div>
+
+                                    <div
+                                        id="skill_6"
+                                        data-value="85"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 6 -->
+
+                                    <!-- Skill 7 -->
+                                    <div class="clearfix">
+                                        <h4>Polish</h4>
+                                        <div class="skill-value">100%</div>
+                                    </div>
+
+                                    <div
+                                        id="skill_7"
+                                        data-value="100"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 7 -->
+
+                                    <!-- Skill 8 -->
+                                    <div class="clearfix">
+                                        <h4>German</h4>
+                                        <div class="skill-value">25%</div>
+                                    </div>
+                                    <div
+                                        id="skill_8"
+                                        data-value="25"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- Skill 8 -->
+
+                                    <!-- Skill 9 -->
+                                    <div class="clearfix">
+                                        <h4>Cooperating</h4>
+                                        <div class="skill-value">90%</div>
+                                    </div>
+                                    <div
+                                        id="skill_9"
+                                        data-value="90"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 9 -->
+
+                                    <!-- Skill 10 -->
+                                    <div class="clearfix">
+                                        <h4>Leadership</h4>
+                                        <div class="skill-value">65%</div>
+                                    </div>
+                                    <div
+                                        id="skill_10"
+                                        data-value="65"
+                                        class="skill-container"
+                                    >
+                                        <div class="skill-percentage"></div>
+                                    </div>
+                                    <!-- /Skill 10 -->
                                 </div>
                             </div>
                         </div>
-                        <div class="project-link">
-                            <a
-                                href="https://github.com/bilusss/Calculator"
-                                target="_blank"
-                            >
-                                <span class="tech-badge">
-                                    <img
-                                        src="./images/icons/github.svg"
-                                        alt="GitHub icon"
-                                    />
-                                    GitHub
-                                </span>
-                            </a>
+                    </div>
+                    <!-- /RESUME -->
+                    <!-- PORTFOLIO -->
+                    <div class="page-title" id="section3">
+                        <h1>Portfolio</h1>
+                        <div class="page-subtitle">
+                            <h4>My Works</h4>
                         </div>
                     </div>
-                </section>
-            </div>
-        </div>
-        <div id="last">
-            <h1>Cześć! Tu Łukasz Bilski</h1>
-            <p>Praca nad stroną w trakcie 👷🏻🛠️</p>
-            <img src="./images/duck.gif" alt="coding duck gif" />
-        </div>
-        <script src="./js/script.js"></script>
-        <div class="modal-container" id="modal-tradingsignalapp">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>TradingSignalApp</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        TradingSignalApp to aplikacja webowa służąca do
-                        zarządzania portfelem kryptowalut. Użytkownik może w
-                        niej dodawać posiadane monety oraz śledzić
-                        najpopularniejsze pary walutowe dostępne na rynku.
-                        Aplikacja integruje się z API Binance, co pozwala na
-                        pobieranie aktualnych danych dotyczących kursów i
-                        notowań.
-                    </p>
-                    <p>
-                        Praca nad tym projektem była niezwykle wymagająca,
-                        ponieważ nauczyłem się między innymi tworzenia
-                        interfejsów użytkownika w HTML, CSS oraz JavaScript, a
-                        także głębiej poznałem zasady programowania w języku
-                        Java. Dużym wyzwaniem była integracja z zewnętrznym API
-                        oraz obsługa dynamicznych danych, co zmusiło mnie do
-                        wdrożenia rozwiązań zapewniających płynność i
-                        responsywność aplikacji.
-                    </p>
-                    <p>
-                        Projekt ten pozwolił mi również poznać technologię
-                        konteneryzacji przy użyciu Docker, co umożliwiło
-                        łatwiejsze wdrażanie i testowanie aplikacji.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <a
-                        href="https://github.com/bilusss/TradingSignalApp"
-                        target="_blank"
-                        class="tech-badge"
+
+                    <div
+                        id="content"
+                        class="page-content site-content single-post"
+                        role="main"
                     >
-                        <img
-                            src="./images/icons/github.svg"
-                            alt="GitHub icon"
-                        />
-                        Zobacz na GitHubie
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="modal-container" id="modal-twojpostergenerator">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>TwojPosterGenerator</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        TwojPosterGenerator to innowacyjny projekt w Pythonie,
-                        który automatycznie generuje estetyczne plakaty
-                        zawierające informacje o ulubionych albumach muzycznych.
-                        Aplikacja korzysta z API Spotify do pobierania
-                        szczegółowych danych o artystach i albumach, takich jak
-                        nazwa, data wydania, okładka albumu czy lista utworów.
-                    </p>
-                    <p>
-                        Następnie, za pomocą biblioteki Pillow, projekt łączy te
-                        dane z elementami graficznymi, tworząc unikalny plakat,
-                        który dodatkowo zawiera scentralizowany kod Spotify oraz
-                        analizę dominujących kolorów okładki.
-                    </p>
-                    <p>
-                        Praca nad tym projektem pozwoliła mi zgłębić zagadnienia
-                        związane z przetwarzaniem obrazów, integracją z
-                        zewnętrznymi API oraz tworzeniem dynamicznych grafik. To
-                        doświadczenie znacząco poszerzyło moje horyzonty w
-                        zakresie automatyzacji procesów graficznych i
-                        projektowania interaktywnych aplikacji.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <a
-                        href="https://github.com/bilusss/twojpostergenerator"
-                        target="_blank"
-                        class="tech-badge"
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <!--PORTFOLIO GRID TODO -->
+                                <div class="p-20">
+                                    <h4>Coming soon. Check out my Github!</h4>
+                                </div>
+                                <div class="p-20"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /PROJECTS -->
+                    <!-- CONTACT -->
+                    <div class="page-title" id="section4">
+                        <h1>Contact</h1>
+                        <div class="page-subtitle">
+                            <h4>Get in Touch</h4>
+                        </div>
+                    </div>
+
+                    <div
+                        id="content"
+                        class="page-content site-content single-post"
+                        role="main"
                     >
-                        <img
-                            src="./images/icons/github.svg"
-                            alt="GitHub icon"
-                        />
-                        Zobacz na GitHubie
-                    </a>
+                        <!-- <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div id="map" class="map">TODO</div>
+                            </div>
+                        </div> -->
+                        <div class="p-80"></div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="linecons linecons-phone"></i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h4 id="phone-number">
+                                            <a
+                                                href="#"
+                                                onclick="showPhoneNumber(); return false;"
+                                                >Click to reveal phone number</a
+                                            >
+                                        </h4>
+                                        <p>Feel free to contact me.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i
+                                            class="linecons linecons-location"
+                                        ></i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h4>Krakow</h4>
+                                        <p>
+                                            Based in Krakow, Poland. From time
+                                            to time in Warsaw.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="info-block-w-icon">
+                                    <div class="ci-icon">
+                                        <i class="linecons linecons-mail"></i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h4 id="email">
+                                            <a
+                                                href="#"
+                                                onclick="showEmail(); return false;"
+                                                >Click to reveal email</a
+                                            >
+                                        </h4>
+                                        <p>Feel free to contact me.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /CONTACT -->
                 </div>
             </div>
+            <!-- /MAIN -->
+            <!-- Footer -->
+            <footer class="site-footer clearfix">
+                <div class="footer-social">
+                    <ul class="footer-social-links">
+                        <li>
+                            <a
+                                href="https://www.instagram.com/0xbilus/"
+                                target="_blank"
+                                >Instagram</a
+                            >
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/bukaszlilski/"
+                                target="_blank"
+                                >LinkedIn</a
+                            >
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.github.com/bilusss"
+                                target="_blank"
+                                >Github</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-copyrights">
+                    <p>© 2025 All rights reserved. Łukasz Bilski.</p>
+                </div>
+            </footer>
+            <!-- /Footer -->
         </div>
-        <div class="modal-container" id="modal-wordguesser">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>WordGuesser</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        WordGuesser to projekt w Pythonie, którego celem jest
-                        pomoc użytkownikom w wyszukiwaniu słów według
-                        określonych kryteriów – takich jak liczba liter,
-                        początkowe lub końcowe znaki. Program czyta dane ze
-                        słownikowego pliku tekstowego, a następnie filtruje je
-                        zgodnie z podanymi przez użytkownika warunkami.
-                    </p>
-                    <p>
-                        Projekt ten był dla mnie doskonałą okazją do nauki pracy
-                        z operacjami na plikach, manipulacji łańcuchami znaków
-                        oraz tworzenia prostych algorytmów filtrujących. Praca
-                        nad WordGuesser pozwoliła mi zrozumieć, jak ważna jest
-                        efektywna obsługa danych oraz jak można wykorzystać
-                        logikę programowania do rozwiązywania praktycznych
-                        problemów.
-                    </p>
-                    <p>
-                        Projekt ten pokazał mi również, jak zbudować
-                        interaktywną aplikację konsolową, która zachęca
-                        użytkownika do eksperymentowania z różnymi kryteriami
-                        wyszukiwania.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <a
-                        href="https://github.com/bilusss/WordGuesser"
-                        target="_blank"
-                        class="tech-badge"
-                    >
-                        <img
-                            src="./images/icons/github.svg"
-                            alt="GitHub icon"
-                        />
-                        Zobacz na GitHubie
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="modal-container" id="modal-calculator">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Calculator - szczegóły projektu</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Projekt Calculator to prosty kalkulator napisany w
-                        Swift, który realizuje podstawowe operacje matematyczne.
-                        Choć z założenia miał być niewielką aplikacją, praca nad
-                        nim umożliwiła mi dogłębne poznanie języka Swift oraz
-                        środowiska Xcode.
-                    </p>
-                    <p>
-                        Dzięki temu projektowi nauczyłem się nie tylko
-                        implementować logikę obliczeniową, ale także projektować
-                        intuicyjny interfejs użytkownika dostosowany do urządzeń
-                        mobilnych.
-                    </p>
-                    <p>
-                        Praca nad tym projektem była dla mnie ważnym krokiem w
-                        kierunku rozwoju aplikacji natywnych dla systemu iOS, a
-                        jednocześnie pozwoliła mi zrozumieć, jak ważne jest
-                        pisanie czytelnego i modularnego kodu.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <a
-                        href="https://github.com/bilusss/Calculator"
-                        target="_blank"
-                        class="tech-badge"
-                    >
-                        <img
-                            src="./images/icons/github.svg"
-                            alt="GitHub icon"
-                        />
-                        Zobacz na GitHubie
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!-- </div> -->
+
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.shuffle.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="js/jquery.googlemap.js"></script>
+        <script src="js/validator.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            function decodeBase64(encodedString) {
+                return atob(encodedString);
+            }
+
+            function showEmail() {
+                var encodedEmail = "YnVrYXN6bGlsc2tpQGdtYWlsLmNvbQ==";
+                var email = decodeBase64(encodedEmail);
+                document.getElementById("email").innerText = email;
+            }
+
+            function showPhoneNumber() {
+                var encodedPhoneNumber = "KzQ4IDcyNiAxMDIgMDA0";
+                var phoneNumber = decodeBase64(encodedPhoneNumber);
+                document.getElementById("phone-number").innerText = phoneNumber;
+            }
+        </script>
     </body>
 </html>

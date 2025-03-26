@@ -1,1 +1,2 @@
-# lukasz-bilski.eu bilusss.github.io
+# bilusss.github.io
+# lukasz-bilski.eu
